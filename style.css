@@ -29,9 +29,10 @@
 }
 
 .waluigi-text {
-	border: 5px solid black;
+	border: 2px solid red;
+	border-radius: 5px;
 	text-align: center;
-	font-size: 30px;
+	font-size: 35px;
 	font-weight: bold;
 		
 	position: absolute;
@@ -41,9 +42,7 @@
 	left: 0;
 }
 
-.waluigi-form {
-/*	border: 5px solid black;*/
-	
+.waluigi-form {	
 	position: absolute;
 	top: 350px;
 	bottom: 0;
@@ -68,4 +67,9 @@
   text-align: center;	
 	margin: auto;
 	
+}
+
+.final-link {
+	position: relative;
+	bottom: -20px;
 }
