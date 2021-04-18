@@ -34,9 +34,19 @@
 				
 				event.preventDefault();
 			}
-			const form = document.getElementById('form');
+			const form1 = document.getElementById('form');
 			const log = document.getElementById('log');
-			form.addEventListener('submit', logSubmit);
+			form1.addEventListener('submit', logSubmit);
+			
+			const scriptURL = 'https://script.google.com/macros/s/AKfycbykCuoJVo0s6ge_INSdFJneL9xFWE2Fq-5BSSdua_U39B_tPlVCK-CXa23SQMIRSZ0g/exec'
+			const form = document.forms['submit-to-google-sheet']
+
+			form.addEventListener('submit', e => {
+				e.preventDefault()
+				fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+					.then(response => console.log('Success!', response))
+					.catch(error => console.error('Error!', error.message))
+			})
 		</script>
 	</div>
 </div>
@@ -44,15 +54,7 @@
 
 
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbykCuoJVo0s6ge_INSdFJneL9xFWE2Fq-5BSSdua_U39B_tPlVCK-CXa23SQMIRSZ0g/exec'
-  const form = document.forms['submit-to-google-sheet']
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
 </script>
 	
 
