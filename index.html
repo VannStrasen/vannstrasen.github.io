@@ -1,8 +1,19 @@
-<form name="submit-to-google-sheet">
-	<input type="checkbox" id="vehicle1" name="vehicle1" value="True">
-	<label for="vehicle1"> You absolutely love Waluigi</label><br>
-  <button type="submit">Send</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Waluigi Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div class="container">
+	<p>Let me talk about waluigi</p>
+	<form name="submit-to-google-sheet">
+		<input type="checkbox" id="vehicle1" name="vehicle1" value="True">
+		<label for="vehicle1"> You absolutely love Waluigi</label><br>
+		<button type="submit">Send</button>
+	</form>
+</div>
 
 <script>
   const scriptURL = 'https://script.google.com/macros/s/AKfycbykCuoJVo0s6ge_INSdFJneL9xFWE2Fq-5BSSdua_U39B_tPlVCK-CXa23SQMIRSZ0g/exec'
@@ -15,3 +26,5 @@
       .catch(error => console.error('Error!', error.message))
   })
 </script>
+	
+</html>
